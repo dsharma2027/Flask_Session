@@ -10,7 +10,7 @@ def base_route():
 def hello(name):
     return f"hello {name}"
 
-@app.route("/test/<int:number>")
+@app.route("/test/<int:number>", methods= ["POST", "GET"])
 def test(number):
     if number <= 10:
         return f"test {number}", 200
